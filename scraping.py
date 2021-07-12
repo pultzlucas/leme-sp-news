@@ -3,10 +3,8 @@ from bs4 import BeautifulSoup
 from requests import get
 
 def get_pageid():
-    if len(sys.argv) < 2 or int(sys.argv) == 0:
-        return 1
-    else: 
-        return int(sys.argv[1])
+    if len(sys.argv) < 2 or int(sys.argv[1]) == 0: return 1
+    return int(sys.argv[1])
 
 def get_news():  
     url = f'https://www.leme.sp.gov.br/noticias/{get_pageid()}'
